@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourDestinyWeb</title>
+    <style>
+        body {
+            background: black;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #container {
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+
+
+        label {
+            color: white;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #tokenDisplay {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 18px;
+            color: #ffffff;
+            background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
+            border-radius: 8px;
+            max-width: 100%;
+            overflow: hidden;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+
+    <form id="loginForm">
+        <label for="email">email</label>
+        <input type="text" id="email" name="email" required><br>
+
+        <label for="password">password</label>
+        <input type="password" id="password" name="password" required><br>
+
+        <label for="role">role</label>
+        <input type="text" id="role" name="role" required><br>
+
+        <button type="submit">get jwt token</button>
+    </form>
+
+    <div id="tokenDisplay"></div>
+</div>
+
+<script>
+    document.getElementById("loginForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        var role = document.getElementById("role").value;
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "http://localhost:8080/api/auth/signup", true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    var response = JSON.parse(xhr.responseText);
+                    var token = response.token;
+
+                    // Display the token under the button
+                    document.getElementById("tokenDisplay").innerText = token;
+                } else {
+                    alert("An error occurred during the login request.");
+                }
+            }
+        };
+
+        var data = JSON.stringify({email: email, password: password, role: role});
+        xhr.send(data);
+    });
+
+</script>
+
+</body>
+</html>

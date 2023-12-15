@@ -1,0 +1,64 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;display=swap">
+    <title>GamesHub</title>
+    <style>
+        body {
+            background: black;
+            background-size: cover;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .title {
+            font-size: 60px;
+            font-weight: bold;
+
+        }
+
+        .sub_title{
+            margin: 20px;
+            font-size: 30px;
+        }
+
+        .button-info {
+            cursor: pointer;
+            font-size: 16px;
+            margin: 30px;
+        }
+    </style>
+    </head>
+<body>
+
+
+<div class="title">
+    GamesHub
+</div>
+<div class="sub_title">API для видеоигрового портала GamesHub
+</div>
+
+
+
+<button class="button-info" onclick="redirectToSignUp()">Регистрация администратора</button>
+<button class="button-info" role="button" onclick="redirectToAnotherPage()">Перейти к управлению</button>
+<div>
+    Орлов Д.К. ИКБО-13-21
+</div>
+<script>
+    function redirectToAnotherPage() {
+        window.location.href = 'http://localhost:8080/swagger-ui/index.html';
+    }
+
+    function redirectToSignUp() {
+        window.location.href = 'http://localhost:8080/registration';
+    }
+</script>
+
+</body></html>
