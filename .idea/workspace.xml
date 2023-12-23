@@ -5,22 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0e6e635-099d-4e7c-ad98-e4907c2e068d" name="Changes" comment="Итоговый проект">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gameshub/adapter/controllers/PublicationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gameshub/adapter/controllers/PublicationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gameshub/adapter/repositories/VideogameRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gameshub/adapter/repositories/VideogameRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gameshub/configuration/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gameshub/configuration/JwtAuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gameshub/configuration/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gameshub/configuration/RedisConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gameshub/configuration/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gameshub/configuration/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gameshub/services/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gameshub/services/AuthenticationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gameshub/services/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gameshub/services/JwtService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gameshub/services/PublicationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gameshub/services/PublicationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gameshub/services/VideogameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gameshub/services/VideogameService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gameshub/services/impl/AuthenticationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gameshub/services/impl/AuthenticationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gameshub/services/impl/JwtServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gameshub/services/impl/JwtServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gameshub/services/impl/UserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gameshub/services/impl/UserDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gameshub/services/impl/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gameshub/services/impl/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gameshub/domain/models/News.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gameshub/domain/models/News.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +108,7 @@
       <workItem from="1702657586068" duration="319000" />
       <workItem from="1702657957601" duration="1918000" />
       <workItem from="1703064421302" duration="1643000" />
-      <workItem from="1703335456472" duration="7007000" />
+      <workItem from="1703335456472" duration="8240000" />
     </task>
     <task id="LOCAL-00001" summary="Итоговый проект">
       <option name="closed" value="true" />
