@@ -42,8 +42,9 @@ public class SecurityConfiguration {
                         (request) -> request
                                 .requestMatchers("index.html", "/", "/registration", "api/auth/**",
                                         "swagger-ui/**", "/v3/api-docs", "/configuration/**", "/swagger*/**",
-                                        "/webjars/**", "/swagger-ui.html", "/v3/api-docs/swagger-config").permitAll()  // Permit access to /index.html without authentication or role
-                                .requestMatchers("publication/**", "videogame/**").hasRole("ADMIN")
+                                        "/webjars/**", "/swagger-ui.html", "/v3/api-docs/swagger-config", "publication/all",
+                                        "publication/new", "news/all", "games/all").permitAll()
+                                .requestMatchers("news/**", "games/**", "publication/**").hasRole("ADMIN")
                                 .anyRequest().authenticated()
                 )
                 .sessionManagement(manager -> manager.sessionCreationPolicy(STATELESS))

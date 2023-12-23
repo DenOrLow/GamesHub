@@ -34,7 +34,7 @@ public class PublicationController {
     @Operation(
             summary = "Информация по публикации (по id)")
     @GetMapping("/{id}")
-    public ResponseEntity<Publication> armour(Model model, @PathVariable Long id) {
+    public ResponseEntity<Publication> publication(Model model, @PathVariable Long id) {
         Publication publication = publicationService.find_Publication(id).getBody();
 
         if (publication != null) {
@@ -46,19 +46,19 @@ public class PublicationController {
     @Operation(
             summary = "Создать публикацию")
     @PostMapping("/new")
-    public ResponseEntity<Publication> add_armour(@RequestBody Publication publication) {
+    public ResponseEntity<Publication> add_publication(@RequestBody Publication publication) {
         try {
             publicationService.savePublication(publication);
             return ResponseEntity.ok(publication);
         } catch (Exception e) {
-            e.printStackTrace();  // Log the exception details
+            e.printStackTrace();
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
         }
     }
     @Operation(
             summary = "Удалить публикацию (по id)")
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<Void> deleteArmor(@PathVariable Long id) {
+    public ResponseEntity<Void> deletePublication(@PathVariable Long id) {
         try {
             publicationService.deletePublicationById(id);
             return ResponseEntity.noContent().build();
@@ -70,7 +70,7 @@ public class PublicationController {
     @Operation(
             summary = "Изменить публикацию")
     @PutMapping("/change/{id}")
-    public ResponseEntity<Void> updateArmor(@PathVariable Long id, @RequestBody Publication updatedPublication) {
+    public ResponseEntity<Void> updatePublication(@PathVariable Long id, @RequestBody Publication updatedPublication) {
         try {
             publicationService.updatePublication(id, updatedPublication);
             return ResponseEntity.noContent().build();

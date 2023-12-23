@@ -16,12 +16,11 @@ public class VideogameService {
     }
 
     public List<Videogame> allVideogames() {
-        return videogameRepository.findAllNews();
+        return videogameRepository.findAllVideogames();
     }
 
     public ResponseEntity<Videogame> find_Videogame(Long id) {
         Optional<Videogame> optionalVideogame = videogameRepository.findById(id);
-
         return optionalVideogame.map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
@@ -36,10 +35,8 @@ public class VideogameService {
 
     public void updateVideogame(Long id, Videogame updateNews) {
         Videogame existingVideogame = videogameRepository.findById(id).orElseThrow(() -> new RuntimeException("Videogame not found"));
-
         existingVideogame.setTitle(updateNews.getTitle());
         existingVideogame.setDescription(updateNews.getDescription());
-
         videogameRepository.save(existingVideogame);
     }
 }

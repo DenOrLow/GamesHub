@@ -8,5 +8,5 @@ import java.util.List;
 
 public interface VideogameRepository extends JpaRepository<Videogame, Long> {
     @Query("SELECT n FROM Videogame n")
-    List<Videogame> findAllNews();
+    List<Videogame> findAllVideogames();
 }

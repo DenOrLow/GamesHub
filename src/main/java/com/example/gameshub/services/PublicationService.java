@@ -22,7 +22,6 @@ public class PublicationService {
 
     public ResponseEntity<Publication> find_Publication(Long id) {
         Optional<Publication> optionalPublication = publicationRepository.findById(id);
-
         return optionalPublication.map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
@@ -37,11 +36,9 @@ public class PublicationService {
 
     public void updatePublication(Long id, Publication updatedPublication) {
         Publication existingPublication = publicationRepository.findById(id).orElseThrow(() -> new RuntimeException("Publication not found"));
-
         existingPublication.setTitle(updatedPublication.getTitle());
         existingPublication.setContent(updatedPublication.getContent());
         existingPublication.setCreatedAt(updatedPublication.getCreatedAt());
-
         publicationRepository.save(existingPublication);
     }
 }
