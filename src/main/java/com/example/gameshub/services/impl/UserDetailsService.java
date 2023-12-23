@@ -13,13 +13,10 @@ public class UserDetailsService implements org.springframework.security.core.use
     @Autowired
     private UserRepo userRepo;
 
-    // Метод для загрузки пользователя по его email
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-        // Ищем пользователя в репозитории по email, если не найден, выбрасываем исключение
         User user = userRepo.findUserByEmail(email).orElseThrow(() -> new UsernameNotFoundException(email));
 
-        // Возвращаем объект пользователя, преобразованный в UserDetails
         return org.springframework.security.core.userdetails.User.withUsername(user.getEmail())
                 .authorities(user.getAuthorities())
                 .password(user.getPassword())
